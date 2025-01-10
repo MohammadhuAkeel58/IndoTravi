@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      padding: 20px;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-    h3 {
-      color: #2c3e50;
-      font-size: 1.5rem;
-    }
-    h5 {
-      color: #34495e;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .code {
-      background: #ecf0f1;
-      color: #2c3e50;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-family: monospace;
-    }
-  </style>
-</head>
-<body>
+
+
   <h3>A fully responsive homepage built using React and styled with Tailwind CSS</h3>
   <p>
     This project showcases a clean modern design with six distinct sections.
@@ -80,5 +37,4 @@
       <div class="code">npm run dev</div>
     </ul>
   </h5>
-</body>
-</html>
+
