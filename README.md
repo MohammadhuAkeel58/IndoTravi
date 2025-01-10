@@ -1,5 +1,6 @@
-A fully responsive homepage built using React and styled with Tailwind CSS. This project showcases a clean modern design with six distinct sections
-Features
+<h1>A fully responsive homepage built using React and styled with Tailwind CSS. This project showcases a clean modern design with six distinct sections
+Features</h1>
+
 📱 Responsive Design: Optimized for both mobile and desktop devices.
 🎨 Modern Styling: Styled using Tailwind CSS for fast and consistent UI development.
 Technologies Used
