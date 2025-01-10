@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import image6 from "../../assets/images/image6.avif";
+import image7 from "../../assets/images/image7.jpg";
+import image8 from "../../assets/images/image8.jpeg";
 
 const comments = [
   {
@@ -11,13 +13,13 @@ const comments = [
   {
     name: "Jane Doe",
     title: "Travel Enthusiast",
-    image: image6,
+    image: image7,
     text: "I found the perfect vacation package through this site. The details and user-friendly interface made planning my trip so much easier. Highly recommend it to anyone planning a trip.",
   },
   {
     name: "John Smith",
     title: "CEO, Travelify",
-    image: image6,
+    image: image8,
     text: "An exceptional platform for discovering travel destinations. The user reviews and price comparisons were incredibly useful for my decision-making process.",
   },
 ];
