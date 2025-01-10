@@ -1,6 +1,6 @@
 
 
-  <h3>A fully responsive homepage built using React and styled with Tailwind CSS</h3>
+  <h3>A Fully Responsive Homepage called IndoTravi built using React and styled with Tailwind CSS</h3>
   <p>
     This project showcases a clean modern design with six distinct sections.
   </p>
@@ -28,9 +28,7 @@
     Follow these steps to set up the project locally:
     <ul>
       <li><strong>Clone the repository:</strong></li>
-      <div class="code">git clone https://github.com/your-username/your-repository.git</div>
-      <li><strong>Navigate to the project folder:</strong></li>
-      <div class="code">cd your-repository</div>
+      <div class="code">(https://github.com/MohammadhuAkeel58/IndoTravi.git)</div>
       <li><strong>Install dependencies:</strong></li>
       <div class="code">npm install</div>
       <li><strong>Start the development server:</strong></li>
