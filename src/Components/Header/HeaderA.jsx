@@ -1,6 +1,12 @@
 import hill from "../../assets/image0.jpg";
+import { useState } from "react";
 
 const HeaderA = () => {
+  const [language, setLanguage] = useState("En");
+
+  const toggleLanguage = () => {
+    setLanguage((pre) => (pre === "En" ? "De" : "En"));
+  };
   return (
     <>
       <div className="absolute inset-0 rounded-md overflow-hidden">
@@ -37,13 +43,32 @@ const HeaderA = () => {
           </nav>
 
           <div className="flex flex-wrap items-center space-x-2 md:space-x-4 md:mt-0 justify-center mt-2">
-            <div className="flex items-center bg-white/20 rounded-full px-2 py-1 font-body">
-              <button className="text-sm text-white px-3 py-1 rounded-full bg-transparent hover:bg-white hover:text-black transition">
+            <div className="flex items-center bg-gray-600 rounded-full px-1 py-1 w-20 relative">
+              <button
+                onClick={toggleLanguage}
+                className={`text-sm px-2 py-1 rounded-full z-10 ${
+                  language === "De" ? "text-black" : "text-white "
+                }`}
+              >
                 De
               </button>
-              <button className="text-sm text-black px-3 py-1 rounded-full bg-white transition">
+
+              <button
+                onClick={toggleLanguage}
+                className={`text-sm px-3 py-1 rounded-full z-10 ${
+                  language === "En" ? "text-black" : "text-white"
+                }`}
+              >
                 En
               </button>
+
+              <div
+                className={`absolute bg-white rounded-full w-8 h-8 transition-transform duration-300 ${
+                  language === "En"
+                    ? "transform translate-x-10"
+                    : "transform translate-x-0"
+                }`}
+              ></div>
             </div>
 
             <button className="bg-white text-black font-medium px-4 sm:px-6 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">
