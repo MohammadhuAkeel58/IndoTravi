@@ -1,8 +1,16 @@
-# React + Vite
+A fully responsive homepage built using React and styled with Tailwind CSS. This project showcases a clean modern design with six distinct sections
+Features
+📱 Responsive Design: Optimized for both mobile and desktop devices.
+🎨 Modern Styling: Styled using Tailwind CSS for fast and consistent UI development.
+Technologies Used
+React: For building the user interface.
+Tailwind CSS: For efficient and modern styling.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo
+Check out the live version of the website here: Live Demo Link (https://indotrave.netlify.app/)
 
-Currently, two official plugins are available:
+Setup and Installation
+Clone the repository:
+Install dependencies: npm install
+Start the development server: npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
