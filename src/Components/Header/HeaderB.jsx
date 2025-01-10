@@ -19,8 +19,8 @@ const HeaderB = () => {
       <p className="text-xs sm:text-sm md:text-xl mb-6 font-body">
         Exploring Indonesia is an unforgettable adventure.
       </p>
-      <div className="flex flex-wrap sm:flex-row items-center justify-center bg-white/10 backdrop-blur-md rounded-full shadow-lg px-4 sm:px-6 py-3 w-full sm:w-4/5 lg:w-3/5 gap-4 mt-5 font-body">
-        <div className="flex items-center gap-2 border-r border-gray-300 pr-4 w-full sm:w-auto">
+      <div className="flex flex-wrap items-center justify-center bg-white/10 backdrop-blur-md rounded-3xl shadow-lg px-4 sm:px-6 py-4 w-full sm:w-4/5 lg:w-3/5 gap-y-4 gap-x-6 mt-5 font-body mb-4">
+        <div className="flex items-center gap-2 border-b sm:border-b-0 sm:border-r border-gray-300 pr-0 sm:pr-4 w-full sm:w-auto">
           <span className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,11 +41,11 @@ const HeaderB = () => {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="bg-transparent text-white placeholder-white focus:outline-none"
+            className="bg-transparent text-white placeholder-white focus:outline-none "
           />
         </div>
 
-        <div className="flex items-center gap-2 border-r border-gray-300 pr-4 w-full sm:w-auto">
+        <div className="flex items-center gap-2 border-b sm:border-b-0 sm:border-r border-gray-300 pr-0 sm:pr-4 w-full sm:w-auto">
           <span className="text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const HeaderB = () => {
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
             placeholder="Budget"
-            className="bg-transparent text-white placeholder-white focus:outline-none"
+            className="bg-transparent text-white placeholder-white focus:outline-none "
           />
         </div>
 
@@ -93,7 +93,7 @@ const HeaderB = () => {
             value={guest}
             onChange={(e) => setGuest(e.target.value)}
             placeholder="Guest"
-            className="bg-transparent text-white placeholder-white focus:outline-none"
+            className="bg-transparent text-white placeholder-white focus:outline-none "
           />
         </div>
 

@@ -1,7 +1,7 @@
 const OptionsB = () => {
   return (
     <div className="lg:w-1/2 w-full font-body">
-      <h3 className="text-xl text-gray-500 font-medium font-title">
+      <h3 className="text-xl text-gray-500 font-medium font-title ">
         How it works
       </h3>
       <h2 className="text-4xl font-bold text-gray-800 mt-2 font-title">
