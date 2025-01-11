@@ -37,7 +37,6 @@ const Comment = () => {
   return (
     <section className="py-12 px-6 lg:px-20 font-body">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
-        {/* Image and Name Section */}
         <div className="lg:w-1/4 w-full flex flex-col items-center lg:items-start mb-6 lg:mb-0">
           <img
             src={comments[currentIndex].image}
@@ -53,17 +52,15 @@ const Comment = () => {
           </div>
         </div>
 
-        {/* Text Section */}
-        <div className="lg:w-3/4 w-full flex justify-center lg:justify-start text-center lg:text-left">
-          <p className="text-gray-700 text-lg leading-relaxed relative max-w-prose">
-            <span className="absolute -left-8 lg:block hidden text-6xl text-gray-300 font-serif">
+        <div className="lg:w-3/4 w-full">
+          <p className="text-gray-700 text-lg leading-relaxed relative">
+            <span className="absolute -left-8 text-6xl text-gray-300 font-serif">
               “
             </span>
             {comments[currentIndex].text}
           </p>
         </div>
 
-        {/* Buttons Section */}
         <div className="flex items-center mt-6 lg:mt-0 lg:ml-6 space-x-4">
           <button
             onClick={() =>
