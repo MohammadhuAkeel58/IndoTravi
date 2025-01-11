@@ -6,6 +6,10 @@ const HeaderB = () => {
   const [guest, setGuest] = useState("");
 
   const handleSearch = () => {
+    if (!date || !budget || !guest) {
+      alert("Please fill in all fields before searching.");
+      return;
+    }
     console.log("Date:", date);
     console.log("Budget:", budget);
     console.log("Guest:", guest);

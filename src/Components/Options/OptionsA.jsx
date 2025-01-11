@@ -1,17 +1,33 @@
+import { useState } from "react";
 import image5 from "../../assets/images/image5.jpg";
 
 const OptionsA = () => {
+  const [date, setDate] = useState("");
+  const [budget, setBudget] = useState("");
+  const [guest, setGuest] = useState("");
+
+  const handleSearch = () => {
+    if (!date || !budget || !guest) {
+      alert("Please fill in all fields before searching.");
+      return;
+    }
+    console.log("Date:", date);
+    console.log("Budget:", budget);
+    console.log("Guest:", guest);
+    alert("Search initiated!");
+  };
+
   return (
-    <div className="lg:w-1/2 w-full font-body">
-      <div className="relative rounded-xl overflow-hidden shadow-lg group">
+    <div className="lg:w-1/2 w-full font-body mx-auto">
+      <div className="relative rounded-xl overflow-hidden shadow-lg group max-w-screen-lg mx-auto">
         <img
           src={image5}
           alt="Travel Destination"
-          className="object-cover w-full h-[50vh] sm:h-[60vh] lg:h-[80vh] transition-transform duration-300 group-hover:scale-105"
+          className="object-cover w-full h-[50vh] sm:h-[60vh] lg:h-[83vh] transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute bottom-0 left-0 w-full p-6 bg-black bg-opacity-60 rounded-b-xl text-white">
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="flex items-center gap-2 border-r border-gray-400 pr-4">
+        <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-black bg-opacity-60 rounded-b-xl text-white">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 pr-9  w-full sm:w-auto">
               <span className="text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +44,16 @@ const OptionsA = () => {
                   />
                 </svg>
               </span>
-              <select className="bg-transparent text-white text-sm focus:outline-none">
-                <option>Date</option>
-              </select>
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="bg-transparent text-white text-sm focus:outline-none w-full"
+                placeholder="mm/dd/yyyy"
+              />
             </div>
 
-            <div className="flex items-center gap-2 border-r border-gray-400 pr-4">
+            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 pr-4 w-full sm:w-auto">
               <span className="text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,12 +70,16 @@ const OptionsA = () => {
                   />
                 </svg>
               </span>
-              <select className="bg-transparent text-white text-sm focus:outline-none">
-                <option>Budget</option>
-              </select>
+              <input
+                type="text"
+                value={budget}
+                onChange={(e) => setBudget(e.target.value)}
+                className="bg-transparent text-white text-sm focus:outline-none w-full"
+                placeholder="Budget"
+              />
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 w-full sm:w-auto">
               <span className="text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,17 +96,26 @@ const OptionsA = () => {
                   />
                 </svg>
               </span>
-              <select className="bg-transparent text-white text-sm focus:outline-none">
-                <option>Guest</option>
-              </select>
+              <input
+                type="number"
+                value={guest}
+                onChange={(e) => setGuest(e.target.value)}
+                className="bg-transparent text-white text-sm focus:outline-none w-full"
+                placeholder="Guest"
+              />
             </div>
 
-            <button className="bg-white text-black rounded-full px-6 py-2 font-medium hover:bg-blue-600 hover:text-white transition">
-              Search
-            </button>
+            <div className="w-full sm:w-auto ">
+              <button
+                onClick={handleSearch}
+                className="bg-white text-black rounded-full px-8 py-2 font-medium hover:bg-blue-600 hover:text-white transition w-full"
+              >
+                Search
+              </button>
+            </div>
           </div>
 
-          <p className="text-sm text-gray-300">
+          <p className="text-sm text-gray-300 text-center lg:text-left">
             Embark on a journey to find your dream destination, where adventure
             and relaxation await, creating unforgettable memories along the way.
           </p>
