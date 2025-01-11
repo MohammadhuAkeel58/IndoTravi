@@ -52,11 +52,8 @@ const Comment = () => {
           </div>
         </div>
 
-        <div className="lg:w-3/4 w-full">
+        <div className="lg:w-3/4 w-full ml-6">
           <p className="text-gray-700 text-lg leading-relaxed relative">
-            <span className="absolute -left-8 text-6xl text-gray-300 font-serif">
-              “
-            </span>
             {comments[currentIndex].text}
           </p>
         </div>
