@@ -10,10 +10,14 @@ export const StatsContextProvider = ({ children }) => {
 
   const statsData = useMemo(
     () => [
-      { label: "Total Customers", value: 10000000 },
-      { label: "Years Of Experience", value: 9 },
-      { label: "Total Destinations", value: 12000 },
-      { label: "Average Rating", value: 5.0 },
+      { label: "Total Customers", value: 10000000, suffix: "M+" },
+      {
+        label: "Years Of Experience",
+        value: 9,
+        suffix: "+",
+      },
+      { label: "Total Destinations", value: 12000, suffix: "K" },
+      { label: "Average Rating", value: 5.0, suffix: ".0" },
     ],
     []
   );
@@ -55,10 +59,12 @@ export const StatsContextProvider = ({ children }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [statsData]);
+
   const contextValue = {
     counters,
     statsData,
   };
+
   return (
     <StatsContext.Provider value={contextValue}>
       {children}

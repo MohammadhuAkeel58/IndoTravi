@@ -5,6 +5,17 @@ import { fadeIn } from "../../variants";
 
 const HeaderC = () => {
   const { counters, statsData } = useContext(StatsContext);
+
+  const formatCounter = (value, suffix) => {
+    if (value >= 1000000) {
+      return `${Math.floor(value / 1000000)}${suffix}`;
+    } else if (value >= 1000) {
+      return `${Math.floor(value / 1000)}${suffix}`;
+    } else {
+      return `${value}${suffix}`;
+    }
+  };
+
   return (
     <div
       id="stats-section"
@@ -20,8 +31,7 @@ const HeaderC = () => {
           className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center"
         >
           <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-2">
-            {counters[index]}
-            {typeof stat.value === "string" && "+"}
+            {formatCounter(counters[index], stat.suffix)}
           </h3>
           <p className="text-gray-500 text-sm sm:text-base">{stat.label}</p>
         </motion.div>
