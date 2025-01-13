@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import image6 from "../../assets/images/image6.avif";
 import image7 from "../../assets/images/image7.jpg";
 import image8 from "../../assets/images/image8.jpeg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const comments = [
   {
@@ -36,7 +38,13 @@ const Comment = () => {
 
   return (
     <section className="py-12 px-6 lg:px-20 font-body">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8"
+      >
         <div className="lg:w-1/4 w-full flex flex-col items-center lg:items-start mb-6 lg:mb-0">
           <img
             src={comments[currentIndex].image}
@@ -79,7 +87,7 @@ const Comment = () => {
             <span className="text-lg font-bold text-gray-700">→</span>
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
