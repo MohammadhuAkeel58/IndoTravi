@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const HeaderB = () => {
   const [date, setDate] = useState("");
@@ -16,7 +18,13 @@ const HeaderB = () => {
   };
 
   return (
-    <div className="relative z-10 flex flex-col items-center justify-center text-center h-3/5 px-4 mt-10 md:mt-28">
+    <motion.div
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+      className="relative z-10 flex flex-col items-center justify-center text-center h-3/5 px-4 mt-10 md:mt-28"
+    >
       <h1 className="text-lg sm:text-xl md:text-5xl font-bold mb-4 font-title">
         Extraordinary Natural and <br /> Cultural Charm
       </h1>
@@ -108,7 +116,7 @@ const HeaderB = () => {
           Search
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
