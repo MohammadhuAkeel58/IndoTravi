@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 const LocationA = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+    <motion.div
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.7 }}
+      className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
+    >
       <div>
         <p className="text-sm text-gray-400 font-body font-bold">
           Best location
@@ -13,7 +21,7 @@ const LocationA = () => {
         Extraordinary natural beauty, enjoy the rich culture, and experience the
         friendliness of the local people.
       </p>
-    </div>
+    </motion.div>
   );
 };
 
