@@ -1,7 +1,5 @@
 import { useState } from "react";
 import image5 from "../../assets/images/image5.jpg";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
 
 const OptionsA = () => {
   const [date, setDate] = useState("");
@@ -20,13 +18,7 @@ const OptionsA = () => {
   };
 
   return (
-    <motion.div
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.7 }}
-      className="lg:w-1/2 w-full font-body mx-auto"
-    >
+    <div className="lg:w-1/2 w-full font-body mx-auto">
       <div className="relative rounded-xl overflow-hidden shadow-lg group max-w-screen-lg mx-auto">
         <img
           src={image5}
@@ -129,7 +121,7 @@ const OptionsA = () => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

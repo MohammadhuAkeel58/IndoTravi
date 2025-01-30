@@ -1,15 +1,6 @@
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
-
 const OptionsB = () => {
   return (
-    <motion.div
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.7 }}
-      className="lg:w-1/2 w-full font-body"
-    >
+    <div className="lg:w-1/2 w-full font-body">
       <h3 className="text-xl text-gray-500 font-medium font-title ">
         How it works
       </h3>
@@ -129,7 +120,7 @@ const OptionsB = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
