@@ -23,7 +23,7 @@ const HeaderB = () => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.7 }}
-      className="relative z-10 flex flex-col items-center justify-center text-center h-3/5 px-4 mt-10 md:mt-28"
+      className="relative z-10 flex flex-col items-center justify-center text-center h-3/5 px-4 mt-10 md:mt-28 pb-16"
     >
       <h1 className="text-lg sm:text-xl md:text-5xl font-bold mb-4 font-title">
         Extraordinary Natural and <br /> Cultural Charm
