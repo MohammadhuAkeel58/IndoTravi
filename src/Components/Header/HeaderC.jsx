@@ -19,7 +19,8 @@ const HeaderC = () => {
   return (
     <div
       id="stats-section"
-      className="absolute left-1/2 transform -translate-x-1/2 bottom-[-70px] z-20 w-full sm:w-4/5 lg:w-3/5 grid grid-cols-2 sm:grid-cols-4 gap-6 font-body"
+      className="absolute left-1/2 transform -translate-x-1/2 bottom-[-450px] sm:bottom-[-70px] z-20 w-full px-4 sm:px-6 md:px-8 
+      grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 font-body"
     >
       {statsData.map((stat, index) => (
         <motion.div
@@ -28,7 +29,7 @@ const HeaderC = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
           key={index}
-          className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center"
+          className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center w-full"
         >
           <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-2">
             {formatCounter(counters[index], stat.suffix)}
