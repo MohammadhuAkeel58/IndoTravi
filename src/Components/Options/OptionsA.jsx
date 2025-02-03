@@ -14,108 +14,109 @@ const OptionsA = () => {
     console.log("Date:", date);
     console.log("Budget:", budget);
     console.log("Guest:", guest);
-    alert("Search initiated!");
   };
 
   return (
-    <div className="lg:w-1/2 w-full font-body mx-auto">
-      <div className="relative rounded-xl overflow-hidden shadow-lg group max-w-screen-lg mx-auto">
+    <div className="lg:w-1/2 w-full font-body">
+      <div className="relative rounded-3xl overflow-hidden shadow-lg group h-full">
         <img
           src={image5}
           alt="Travel Destination"
-          className="object-cover w-full h-[50vh] sm:h-[60vh] lg:h-[83vh] transition-transform duration-300 group-hover:scale-105"
+          className="object-cover w-full h-[600px] md:h-[650px] lg:h-[700px] transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-black bg-opacity-60 rounded-b-xl text-white">
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 pr-9  w-full sm:w-auto">
-              <span className="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 4h10m-9 4h.01M6 16h.01M4 12h16M16 12h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4a2-2 0 012-2z"
-                  />
-                </svg>
-              </span>
-              <input
-                type="date"
+        <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
+          <div className="flex flex-col gap-4 max-w-[400px] mx-auto">
+            {/* Date Select */}
+            <div className="w-full bg-black/40 backdrop-blur-sm rounded-full px-6 py-3 flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              <select
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="bg-transparent text-white text-sm focus:outline-none w-full"
-                placeholder="mm/dd/yyyy"
-              />
+                className="bg-transparent text-white text-sm focus:outline-none cursor-pointer w-full"
+              >
+                <option value="" disabled className="text-gray-800">
+                  Date
+                </option>
+              </select>
             </div>
 
-            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 pr-4 w-full sm:w-auto">
-              <span className="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c.828 0 1.5.672 1.5 1.5S12.828 11 12 11s-1.5-.672-1.5-1.5S11.172 8 12 8zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </span>
-              <input
-                type="text"
+            {/* Budget Select */}
+            <div className="w-full bg-black/40 backdrop-blur-sm rounded-full px-6 py-3 flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <select
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
-                className="bg-transparent text-white text-sm focus:outline-none w-full"
-                placeholder="Budget"
-              />
+                className="bg-transparent text-white text-sm focus:outline-none cursor-pointer w-full"
+              >
+                <option value="" disabled className="text-gray-800">
+                  Budget
+                </option>
+              </select>
             </div>
 
-            <div className="flex items-center gap-2 border-b lg:border-b-0 lg:border-r border-gray-400 w-full sm:w-auto">
-              <span className="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a6 6 0 00-5-5.91M9 20H4v-2a6 6 0 015-5.91M12 14a4 4 0 100-8 4 4 0 000 8z"
-                  />
-                </svg>
-              </span>
-              <input
-                type="number"
+            {/* Guest Select */}
+            <div className="w-full bg-black/40 backdrop-blur-sm rounded-full px-6 py-3 flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+              <select
                 value={guest}
                 onChange={(e) => setGuest(e.target.value)}
-                className="bg-transparent text-white text-sm focus:outline-none w-full"
-                placeholder="Guest"
-              />
+                className="bg-transparent text-white text-sm focus:outline-none cursor-pointer w-full"
+              >
+                <option value="" disabled className="text-gray-800">
+                  Guest
+                </option>
+              </select>
             </div>
 
-            <div className="w-full sm:w-auto ">
-              <button
-                onClick={handleSearch}
-                className="bg-white text-black rounded-full px-8 py-2 font-medium hover:bg-blue-600 hover:text-white transition w-full"
-              >
-                Search
-              </button>
-            </div>
+            {/* Search Button */}
+            <button
+              onClick={handleSearch}
+              className="w-full bg-white hover:bg-gray-100 text-gray-900 rounded-full py-3 text-sm font-medium transition-colors duration-300"
+            >
+              Search
+            </button>
           </div>
 
-          <p className="text-sm text-gray-300 text-center lg:text-left">
+          <p className="text-sm text-white/80 text-center mt-6 max-w-[400px] mx-auto">
             Embark on a journey to find your dream destination, where adventure
             and relaxation await, creating unforgettable memories along the way.
           </p>

@@ -3,10 +3,12 @@ import OptionsB from "./OptionsB";
 
 const Options = () => {
   return (
-    <section className="mt-20 px-4 sm:px-8 lg:px-16">
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:space-x-16 space-y-12 lg:space-y-0">
-        <OptionsA />
-        <OptionsB />
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 h-full">
+          <OptionsA />
+          <OptionsB />
+        </div>
       </div>
     </section>
   );

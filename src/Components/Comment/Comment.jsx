@@ -37,57 +37,73 @@ const Comment = () => {
   }, []);
 
   return (
-    <section className="py-12 px-6 lg:px-20 font-body">
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8"
-      >
-        <div className="lg:w-1/4 w-full flex flex-col items-center lg:items-start mb-6 lg:mb-0">
-          <img
-            src={comments[currentIndex].image}
-            alt={comments[currentIndex].name}
-            className="w-20 h-20 rounded-full shadow-lg mb-4"
-          />
+    <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-20 font-body">
+      <div className="container mx-auto max-w-7xl">
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12"
+        >
+          {/* Profile Section */}
+          <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start">
+            <img
+              src={comments[currentIndex].image}
+              alt={comments[currentIndex].name}
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-lg mb-3 sm:mb-4 object-cover"
+              loading="lazy"
+            />
 
-          <div className="text-center lg:text-left">
-            <h4 className="text-lg font-bold text-gray-800">
-              {comments[currentIndex].name}
-            </h4>
-            <p className="text-gray-500">{comments[currentIndex].title}</p>
+            <div className="text-center lg:text-left">
+              <h4 className="text-base sm:text-lg font-bold text-gray-800">
+                {comments[currentIndex].name}
+              </h4>
+              <p className="text-sm sm:text-base text-gray-500">
+                {comments[currentIndex].title}
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="lg:w-3/4 w-full ml-6">
-          <p className="text-gray-700 text-lg leading-relaxed relative">
-            {comments[currentIndex].text}
-          </p>
-        </div>
+          {/* Comment Text */}
+          <div className="w-full lg:w-3/4">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed text-center lg:text-left">
+              {comments[currentIndex].text}
+            </p>
+          </div>
 
-        <div className="flex items-center mt-6 lg:mt-0 lg:ml-6 space-x-4">
-          <button
-            onClick={() =>
-              setCurrentIndex(
-                (prevIndex) =>
-                  (prevIndex - 1 + comments.length) % comments.length
-              )
-            }
-            className="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition"
-          >
-            <span className="text-lg font-bold text-gray-700">←</span>
-          </button>
-          <button
-            onClick={() =>
-              setCurrentIndex((prevIndex) => (prevIndex + 1) % comments.length)
-            }
-            className="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition"
-          >
-            <span className="text-lg font-bold text-gray-700">→</span>
-          </button>
-        </div>
-      </motion.div>
+          {/* Navigation Buttons */}
+          <div className="flex items-center justify-center space-x-3 sm:space-x-4 mt-6 lg:mt-0">
+            <button
+              onClick={() =>
+                setCurrentIndex(
+                  (prevIndex) =>
+                    (prevIndex - 1 + comments.length) % comments.length
+                )
+              }
+              className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors duration-200"
+              aria-label="Previous comment"
+            >
+              <span className="text-base sm:text-lg font-bold text-gray-700">
+                ←
+              </span>
+            </button>
+            <button
+              onClick={() =>
+                setCurrentIndex(
+                  (prevIndex) => (prevIndex + 1) % comments.length
+                )
+              }
+              className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center transition-colors duration-200"
+              aria-label="Next comment"
+            >
+              <span className="text-base sm:text-lg font-bold text-gray-700">
+                →
+              </span>
+            </button>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };
